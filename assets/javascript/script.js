@@ -1,4 +1,6 @@
-var players = ["Brent Burns", "Alex Ovechkin", "Sidney Crosby", "Connor McDavid", "Pavel Datsyuk", "Sebastian Aho", "Johnny Gaudreau", "Andrei Vasilevskiy", "Gritty the Mascot"];
+
+
+var players = ["Gritty the Mascot", "Sebastian Aho", "Pavel Datsyuk", "Brent Burns", "Joe Thornton", "Connor McDavid", "Alex Ovechkin", "Sidney Crosby"];
 console.log("var players has been read");
 
 // Function for displaying the gifs once a button has been clicked on
@@ -19,10 +21,10 @@ function displayGifs(){
               var p = $("<p>");
               p.text("Rating: " + results[i].rating);
               var gif = $("<img>");
-              gif.addClass('individualGif');
+              gif.addClass("individualGif");
 
             //   Adding src="still gif" data-still="still gif" data-animate="animated gif" data-state="still"
-              gif.attr("src", results[i].images.fixed_height_still.url);
+              gif.attr("src", results[i].images.fixed_height_still.url); 
               gif.attr("data-still", results[i].images.fixed_height_still.url);
               gif.attr("data-animate", results[i].images.fixed_height.url);
               gif.attr("data-state", "still");
@@ -33,6 +35,22 @@ function displayGifs(){
               $("#gifViewer").prepend(gifDiv);
               console.log("displayGifs has ended");
           }
+          // On click for animating the gifs
+              $(document).on("click", ".individualGif", function(){
+                console.log("individualGif on click has started")
+                var state = $(this).attr("data-state");
+            
+                if (state === "still"){
+                    $(this).attr("src", $(this).attr("data-animate"));
+                    $(this).attr("data-state", "animate");
+                        
+                } else {
+                    $(this).attr("src", $(this).attr("data-still"));
+                    $(this).attr("data-state", "still");
+                }
+                console.log("individualGif on click has ended");
+            });
+          
         });
       }
 
@@ -43,15 +61,17 @@ function showButtons(){
     for (i=0; i<players.length; i++){
         var person = $("<button>");
         person.addClass("playerButton");
+        person.addClass("btn");
+        person.addClass("btn-dark");
         person.attr("data-name", players[i]);
         person.text(players[i]);
         $("#buttons").append(person);
-        console.log("function showButtons has ended")
+        console.log("function showButtons has ended");
     }
 }    
 
     // This function handles events where a player button is clicked
-$("#addNewCategory").on("click", function(event) {
+$(document).on("click", "#addNewCategory", function(event) {
     console.log("on click for adding a new button has started");
     event.preventDefault();
     var person = $("#gifRequest").val().trim();
@@ -59,23 +79,6 @@ $("#addNewCategory").on("click", function(event) {
     showButtons();
     console.log("on click for adding a new button has ended");
   });
-
- 
-//  On click for animating and pausing individual gifs 
-$(".individualGif").on("click", function(){
-    console.log("individualGif on click has started")
-    var state = $(this).attr("data-state");
-
-    if (state === "still"){
-        $(this).attr("src", $(this).attr("data-animate"));
-        $(this).attr("data-state", "animate");
-            
-    } else {
-        $(this).attr("src", $(this).attr("data-still"));
-        $(this).attr("data-state", "still");
-    }
-    console.log("individualGif on click has ended");
-});
 
 // On click for displaying the gifs when the player's button is clicked
 $(document).on("click", ".playerButton", displayGifs);

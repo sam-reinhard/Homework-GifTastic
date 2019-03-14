@@ -14,6 +14,10 @@ header {
     margin-bottom: 30px;
 }
 
+p {
+    font-weight: bold;
+}
+
 #buttons {
     margin-bottom: 20px;
 }
@@ -23,9 +27,16 @@ header {
 }
 
 #newGifForm {
-    background-color: white;
+    margin-top: 80px;
+    background-color: rgba(255, 255, 255, 0.836);
     border: 2px solid red;
     border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#gifRequest {
+    width: 75%;
 }
 
 #gifViewer {
