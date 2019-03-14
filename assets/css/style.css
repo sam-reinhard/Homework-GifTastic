@@ -1,0 +1,35 @@
+body {
+    background-image: url("../images/bettericerink.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#buttons {
+    margin-bottom: 20px;
+}
+
+.playerButton {
+    margin: 5px;
+}
+
+#newGifForm {
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+#gifViewer {
+    overflow: auto;
+}
+
+

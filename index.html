@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Ultimate NHL GIF Machine</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>The Ultimate NHL GIF Machine</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="buttons">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" id="gifViewer">
+
+            </div>
+
+            <div class="col-md-6" id="searchBar">
+                <form id="newGifForm">
+                    <label for="gifRequest">Add a player, team, or your favorite mascot!</label>
+                    <br>
+                    <input type="text" id="gifRequest">
+                    <br><br>
+                      
+                    <!-- Button triggers new movie to be added -->
+                    <input id="addNewCategory" type="submit" value="Search">
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
