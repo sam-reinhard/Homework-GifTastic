@@ -1,3 +1,4 @@
+/* Main Page */
 body {
     background-image: url("../images/bettericerink.jpg");
     background-repeat: no-repeat;
@@ -8,6 +9,7 @@ body {
     font-family: 'Sintony', sans-serif;
 }
 
+/* Header */
 header {
     width: 100%;
     text-align: center;
@@ -20,8 +22,11 @@ h1 {
     font-size: 48px;
 }
 
-p {
-    font-weight: bold;
+/* Top Buttons and Their Related Div */
+.playerButton {
+    margin: 5px;
+    background-color: rgb(153, 26, 36);
+    border-color: rgb(153, 26, 36);
 }
 
 #buttons {
@@ -29,12 +34,7 @@ p {
     text-align: center;
 }
 
-.playerButton {
-    margin: 5px;
-    background-color: rgb(153, 26, 36);
-    border-color: rgb(153, 26, 36);
-}
-
+/* GIF Category Addition Form */
 #addNewCategory {
     background-color: rgb(153, 26, 36);
     border-color: rgb(153, 26, 36);
@@ -54,8 +54,17 @@ p {
     width: 75%;
 }
 
+/* GIF Display Section */
+p {
+    font-weight: bold;
+}
+
 #gifViewer {
     overflow: auto;
 }
+
+
+
+
 
 
