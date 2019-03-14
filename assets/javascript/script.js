@@ -1,4 +1,5 @@
 
+// Finish styling the page and attempt some bonus challenges
 
 var players = ["Gritty the Mascot", "Sebastian Aho", "Pavel Datsyuk", "Brent Burns", "Joe Thornton", "Connor McDavid", "Alex Ovechkin", "Sidney Crosby"];
 console.log("var players has been read");
@@ -35,6 +36,7 @@ function displayGifs(){
               $("#gifViewer").prepend(gifDiv);
               console.log("displayGifs has ended");
           }
+
           // On click for animating the gifs
               $(document).on("click", ".individualGif", function(){
                 console.log("individualGif on click has started")
@@ -70,12 +72,13 @@ function showButtons(){
     }
 }    
 
-    // This function handles events where a player button is clicked
+    // This function handles events where a player button is added
 $(document).on("click", "#addNewCategory", function(event) {
     console.log("on click for adding a new button has started");
     event.preventDefault();
     var person = $("#gifRequest").val().trim();
     players.push(person);
+    $("input#gifRequest").val("");
     showButtons();
     console.log("on click for adding a new button has ended");
   });
