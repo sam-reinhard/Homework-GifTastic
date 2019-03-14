@@ -5,6 +5,7 @@ body {
     background-position: center;
     height: 100%;
     width: 100%;
+    font-family: 'Sintony', sans-serif;
 }
 
 header {
@@ -12,6 +13,11 @@ header {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 48px;
 }
 
 p {
@@ -24,15 +30,23 @@ p {
 
 .playerButton {
     margin: 5px;
+    background-color: rgb(153, 26, 36);
+    border-color: rgb(153, 26, 36);
+}
+
+#addNewCategory {
+    background-color: rgb(153, 26, 36);
+    border-color: rgb(153, 26, 36);
 }
 
 #newGifForm {
     margin-top: 80px;
-    background-color: rgba(255, 255, 255, 0.836);
-    border: 2px solid red;
+    background-color: rgba(228, 241, 255, 0.836);
+    border: 2px solid rgb(153, 26, 36);
     border-radius: 30px;
     padding: 20px;
     text-align: center;
+    font-weight: bold;
 }
 
 #gifRequest {

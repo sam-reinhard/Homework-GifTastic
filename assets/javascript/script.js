@@ -1,7 +1,6 @@
-
-// Finish styling the page and attempt some bonus challenges
-
-var players = ["Gritty the Mascot", "Sebastian Aho", "Pavel Datsyuk", "Brent Burns", "Patrick Kane", "Scott Hartnell", "Evgeni Malkin", "Stanley Cup", "Joe Thornton", "Connor McDavid", "Alex Ovechkin", "Sidney Crosby"];
+var players = ["Gritty the Mascot", "Sebastian Aho", "Pavel Datsyuk", "Brent Burns",
+               "Patrick Kane", "Scott Hartnell", "Evgeni Malkin", "Stanley Cup", 
+               "Joe Thornton", "Connor McDavid", "Alex Ovechkin", "Sidney Crosby"];
 
 // Function for displaying the gifs once a button has been clicked on
 function displayGifs(){
@@ -16,9 +15,12 @@ function displayGifs(){
 
           var results = response.data;
           for (var i = 0; i < results.length; i++) {
+
+            // Creating the elements, formatting the text returned by rating, and assigning a class
               var gifDiv = $("<div>");
               var p = $("<p>");
-              p.text("Rating: " + results[i].rating);
+              var ratingCaps = results[i].rating.toUpperCase();
+              p.text("Rating: " + ratingCaps);
               var gif = $("<img>");
               gif.addClass("individualGif");
 
@@ -38,7 +40,6 @@ function displayGifs(){
 // Function for animating and freezing the gifs      
 function gifAnimator(){
   var state = $(this).attr("data-state");
-                console.log(state);
             
                 if (state === "still"){
                     $(this).attr("src", $(this).attr("data-animate"));
@@ -60,7 +61,7 @@ function showButtons(){
         var person = $("<button>");
         person.addClass("playerButton");
         person.addClass("btn");
-        person.addClass("btn-dark");
+        person.addClass("btn-danger");
         person.attr("data-name", players[i]);
         person.text(players[i]);
         $("#buttons").append(person);
