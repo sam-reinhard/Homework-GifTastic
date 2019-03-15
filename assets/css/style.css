@@ -14,12 +14,13 @@ header {
     width: 100%;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 h1 {
     font-weight: bold;
     font-size: 48px;
+    padding: 0px 20px;
 }
 
 /* Top Buttons and Their Related Div */
@@ -42,6 +43,7 @@ h1 {
 
 #newGifForm {
     margin-top: 80px;
+    margin-bottom: 20px;
     background-color: rgba(228, 241, 255, 0.836);
     border: 2px solid rgb(153, 26, 36);
     border-radius: 30px;
@@ -61,6 +63,7 @@ p {
 
 #gifViewer {
     overflow: auto;
+    margin-bottom: 20px;
 }
 
 

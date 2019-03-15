@@ -1,9 +1,11 @@
 var players = ["Gritty the Mascot", "Sebastian Aho", "Pavel Datsyuk", "Brent Burns",
                "Patrick Kane", "Scott Hartnell", "Evgeni Malkin", "Stanley Cup", 
-               "Joe Thornton", "Connor McDavid", "Alex Ovechkin", "Sidney Crosby"];
+               "Joe Thornton", "Connor McDavid", "Alex Ovechkin", "Sidney Crosby", 
+               "Nikita Kucherov", "Brad Marchand"];
 
 // Function for displaying the gifs once a button has been clicked on
 function displayGifs(){
+        
         var person = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + person + "&api_key=dc6zaTOxFJmzC&limit=10";
 
@@ -37,6 +39,7 @@ function displayGifs(){
           }
         });
       }
+      
 // Function for animating and freezing the gifs      
 function gifAnimator(){
   var state = $(this).attr("data-state");
