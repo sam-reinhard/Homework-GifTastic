@@ -7,7 +7,7 @@ var players = ["Gritty the Mascot", "Sebastian Aho", "Pavel Datsyuk", "Brent Bur
 function displayGifs(){
         
         var person = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + person + "&api_key=dc6zaTOxFJmzC&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + person + "&api_key=TQPklMWDOIMzhNyYGOosoJg2IJLLWYSc&limit=10";
 
         // Creating an AJAX call for the specific player button being clicked
         $.ajax({
